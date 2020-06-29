@@ -4,11 +4,7 @@ Panels:
     Name: Displays
     Property Tree Widget:
       Expanded:
-        - /Global Options1
         - /Status1
-        - /LaserScan1
-        - /LaserScan1/Status1
-        - /LaserScan2
       Splitter Ratio: 0.5
     Tree Height: 775
   - Class: rviz/Selection
@@ -149,36 +145,6 @@ Visualization Manager:
       Unreliable: false
       Use Timestamp: false
       Value: true
-    - Alpha: 1
-      Autocompute Intensity Bounds: true
-      Autocompute Value Bounds:
-        Max Value: 10
-        Min Value: -10
-        Value: true
-      Axis: Z
-      Channel Name: intensity
-      Class: rviz/LaserScan
-      Color: 255; 255; 255
-      Color Transformer: ""
-      Decay Time: 0
-      Enabled: false
-      Invert Rainbow: false
-      Max Color: 255; 255; 255
-      Max Intensity: 4096
-      Min Color: 0; 0; 0
-      Min Intensity: 0
-      Name: LaserScan
-      Position Transformer: ""
-      Queue Size: 10
-      Selectable: true
-      Size (Pixels): 3
-      Size (m): 0.200000003
-      Style: Flat Squares
-      Topic: ""
-      Unreliable: false
-      Use Fixed Frame: true
-      Use rainbow: true
-      Value: false
     - Class: rviz/InteractiveMarkers
       Enable Transparency: true
       Enabled: true
@@ -258,10 +224,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.419797421
+      Pitch: 1.06979716
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 1.91539669
+      Yaw: 0.930396974
     Saved: ~
 Window Geometry:
   Displays:
