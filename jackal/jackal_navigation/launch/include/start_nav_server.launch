@@ -1,4 +1,3 @@
-<?xml version="1.0"?>
 <launch>
   <arg name="gp_debug" default="false"/>
   <arg name="ctrl_debug" default="false"/>
