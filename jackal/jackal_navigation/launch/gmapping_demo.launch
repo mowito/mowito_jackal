@@ -1,0 +1,29 @@
+<!--launch>
+
+  <include file="$(find jackal_navigation)/launch/include/gmapping.launch" />
+
+  <include file="$(find jackal_navigation)/launch/include/move_base.launch" />
+
+</launch-->
+<launch>
+    <arg name="scan_topic" default="front/scan" /> 
+    <arg name="laser_frame" default="laser" />
+    <arg name="odom_frame" default="odom" />
+    <arg name="base_frame" default="base_link" />
+    <arg name="map_frame" default="map" />
+
+    
+
+    <!-- NAVIGATION -->
+    <include file="$(find mw_run)/launch/start_mw_mapping.launch">
+        <arg name="scan_topic" value="front/scan" /> 
+        <arg name="laser_frame" value="front_laser" />
+        <arg name="odom_frame" value="odom" />
+        <arg name="base_frame" value="base_link" />
+        <arg name="map_frame" value="map" />
+    </include>
+ 
+
+  <node type="rviz" name="rviz" pkg="rviz" args="-d $(find jackal_navigation)/rviz/gmapping.rviz" />
+
+</launch>
