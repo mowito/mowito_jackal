@@ -1,12 +1,12 @@
 
 <launch>
-    <arg name="map_path" default="/home/akshay/jackal_mowito/src/jackal/jackal_navigation/maps/jackal_race.yaml"/>
+    <arg name="map_path" default="/home/akshay/jackal_mowito/src/mowito_files/jackal_navigation/maps/jackal_race.yaml"/>
     <arg name="respawn" default="true"/>
     <arg name="debug" default="false"/>
     <arg name="world_name" default="mowito"/>
     <arg name="gui" default="true"/>
 
-    <include file="/home/akshay/jackal_mowito/src/jackal/jackal_navigation/launch/include/start_mwpfl.launch">
+    <include file="$(find jackal_navigation)/launch/include/start_mwpfl.launch">
         <arg name="map_address" value="$(arg map_path)"/>
         <arg name="robot_init_x" value="0"/>
         <arg name="robot_init_y" value="0"/>
@@ -14,8 +14,8 @@
         <arg name="sim" value="true"/>
     </include>
 
-    <include file="/home/akshay/jackal_mowito/src/jackal/jackal_navigation/launch/include/start_nav_server.launch">
-        <arg name="mission_executive_config" value="/home/akshay/jackal_mowito/src/jackal/jackal_navigation/config/mission_executive_config/mission_executive_params.yaml"/>
+    <include file="/home/akshay/jackal_mowito/src/mowito_files/jackal_navigation/launch/include/start_nav_server.launch">
+        <arg name="mission_executive_config" value="/home/akshay/jackal_mowito/src/mowito_files/jackal_navigation/config/mission_executive_config/mission_executive_params.yaml"/>
         <arg name="respawn" value="$(arg respawn)"/>
         <arg name="gp_debug" value="$(arg debug)"/>
         <arg name="ctrl_debug" value="$(arg debug)"/>  
