@@ -5,11 +5,11 @@ global_costmap:
   transform_tolerance: 0.5
   width: 20
   height: 20
-  origin_x: -7.5
-  origin_y: -7.5
-  static_map: false
-  rolling_window: true
-  inflation_radius: 0.50  #.40
+  origin_x: -20.0  #-7.5
+  origin_y: -20.0  #-7.5
+  static_map: true
+  rolling_window: false
+  inflation_radius: 0.20  #.40
   resolution: 0.025
   plugins:
             - {name: static,                  type: "costmap_2d::StaticLayer"}
