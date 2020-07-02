@@ -319,6 +319,14 @@ Visualization Manager:
       Topic: /plan
       Unreliable: false
       Value: true
+    - Class: rviz/MarkerArray
+      Enabled: true
+      Marker Topic: /goal_queue
+      Name: MarkerArray
+      Namespaces:
+        {}
+      Queue Size: 100
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -344,7 +352,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 28.1078682
+      Distance: 17.4633369
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
@@ -359,10 +367,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.84979701
+      Pitch: 1.44979656
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 6.15858316
+      Yaw: 6.26358366
     Saved: ~
 Window Geometry:
   Displays:

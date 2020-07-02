@@ -5,12 +5,20 @@ find_package(catkin REQUIRED COMPONENTS roslaunch)
 
 catkin_package()
 
-roslaunch_add_file_check(launch/include/amcl.launch)
-roslaunch_add_file_check(launch/amcl_demo.launch)
-roslaunch_add_file_check(launch/include/gmapping.launch)
-roslaunch_add_file_check(launch/gmapping_demo.launch)
-roslaunch_add_file_check(launch/include/move_base.launch)
-roslaunch_add_file_check(launch/odom_navigation_demo.launch)
+roslaunch_add_file_check(launch/include/start_mw_mapping.launch)
+roslaunch_add_file_check(launch/jackal_mw_mapping.launch)
+roslaunch_add_file_check(launch/include/start_mwpfl.launch)
+roslaunch_add_file_check(launch/jackal_mw_nav.launch)
+roslaunch_add_file_check(launch/include/start_nav_server.launch)
+roslaunch_add_file_check(launch/jackal_mw_nav_no_map.launch)
+roslaunch_add_file_check(launch/include/start_costmap.launch)
+roslaunch_add_file_check(launch/include/start_controller_executive.launch)
+roslaunch_add_file_check(launch/include/start_explore.launch)
+roslaunch_add_file_check(launch/include/start_global_planner.launch)
+roslaunch_add_file_check(launch/include/start_recovery_executive.launch)
+roslaunch_add_file_check(launch/include/start_rviz.launch)
+roslaunch_add_file_check(launch/jackal_mw_explore_mapping.launch)
+
 
 install(
 DIRECTORY launch maps params
