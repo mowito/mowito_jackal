@@ -15,7 +15,7 @@
     
 
     <!-- NAVIGATION -->
-    <include file="$(find mw_run)/launch/start_mw_mapping.launch">
+    <include file="$(find jackal_navigation)/launch/include/start_mw_mapping.launch">
         <arg name="scan_topic" value="front/scan" /> 
         <arg name="laser_frame" value="front_laser" />
         <arg name="odom_frame" value="odom" />
