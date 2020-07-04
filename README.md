@@ -14,7 +14,7 @@ In a new terminal (Source the files)
 
 Move the robot around using InteractiveMarkers, which can viewed in rviz.
 
-## For navigation with mapping
+## For navigation with map
 
 In a terminal (Source the files)
 
