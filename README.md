@@ -1,7 +1,5 @@
 # mowito_jackal
 
-In line 3,17,18 of ```jackal_mw_nav.launch ``` in  ``` mowito_files/jackal_navigation/launch ``` replace the path  ```/home/akshay/jackal_mowito/src/mowito_files/jackal_navigation ``` with your corresponding path.
-
 ## For Mapping
 
 In a terminal (Source the files)
