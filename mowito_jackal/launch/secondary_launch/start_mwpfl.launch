@@ -1,0 +1,54 @@
+<launch>  
+    
+    <arg name="sim" default="true" /> 
+    <arg name="scan_topic" default="front/scan"/>
+    <arg name="laser_frame" default="front_laser"/>
+    <arg name="map_address" default="$(find mw_mapping)/maps/mowito_map.yaml" />
+    <arg name="robot_init_x" default="0"/>
+    <arg name="robot_init_y" default="0"/>
+    <arg name="robot_init_phi" default="0"/>
+     
+    <param name="use_sim_time" value="$(arg sim)"/>
+
+     <!-- MAP SERVER -->
+    <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_address)" output="screen">
+    </node>
+
+    <!-- AMCL -->
+    <node pkg="mwpfl" type="mwpfl" name="mwpfl" output="screen">
+
+	    <remap from="initialpose"               to="initialpose" />
+        <param name="min_particles"             value="2000"/>
+        <param name="max_particles"             value="5000"/>
+        <param name="kld_err"                   value="0.02"/>
+        <param name="update_min_distance"       value="0.05"/>
+        <param name="update_min_angle"          value="0.05"/>
+        <param name="transform_tolerance"       value="0.5"/>
+        <param name="initial_pose_x" 		    value="$(arg robot_init_x)"/>
+        <param name="initial_pose_y" 		    value="$(arg robot_init_y)"/>
+        <param name="initial_pose_a" 		    value="$(arg robot_init_phi)"/>
+        
+	    <!-- Laser parameters, consider noisy laser data -->
+        <remap from="scan"                      to="$(arg scan_topic)"/>
+        <param name="laser_max_range"           value="30.0"/>
+        <param name="laser_z_hit"               value="0.5"/>
+        <param name="laser_z_rand"              value="0.5"/>
+        <param name="laser_sigma_hit"           value="0.2"/>
+        <param name="laser_lambda_short"        value="0.1"/>
+        <param name="laser_likelihood_max_dist" value="2.0"/>
+
+	    <!-- Model used for localization, likelihood_field model with laser beam skip -->
+        <param name="laser_model_type"          value="likelihood_field"/>
+        <param name="odom_model_type"           value="diff-corrected"/>
+
+	    <!-- Odometry noise param -->
+        <param name="odom_noise_rot_rot" 	    value="0.2"/>
+        <param name="odom_noise_rot_trans"	    value="0.2"/>
+        <param name="odom_noise_trans_trans"	value="0.2"/>
+        <param name="odom_noise_trans_rot" 	    value="0.2"/>
+        <param name="odom_frame_id"             value="odom"/>
+        <param name="base_frame_id"             value="base_link"/>
+        <param name="global_frame_id"           value="map"/>
+    </node>
+
+</launch>

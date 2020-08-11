@@ -16,11 +16,7 @@ Move the robot around using InteractiveMarkers, which can viewed in rviz.
 
 ## For navigation with map
 
-In a terminal (Source the files)
-
-```  $ roslaunch jackal_gazebo jackal_world.launch  config:=front_laser  ```
-
-In a new terminal (Source the files,localise the robot) 
+In a terminal run
 
 ```$ roslaunch jackal_navigation jackal_mw_nav.launch ```
 
