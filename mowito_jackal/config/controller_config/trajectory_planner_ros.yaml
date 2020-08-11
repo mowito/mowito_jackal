@@ -1,7 +1,7 @@
 trajectory_planner:
 
 # Robot Configuration Parameters
-  max_vel_x: 0.5
+  max_vel_x: 1.5
   min_vel_x: 0.1
 
   max_vel_theta:  1.5
@@ -13,15 +13,15 @@ trajectory_planner:
   acc_lim_theta: 5.0
 
 # Goal Tolerance Parameters
-  xy_goal_tolerance: 0.05
-  yaw_goal_tolerance: 0.1
+  xy_goal_tolerance: 0.1
+  yaw_goal_tolerance: 0.15
 
 # Differential-drive robot configuration
   holonomic_robot: false
 
 # Forward Simulation Parameters
   sim_time: 2.0
-  vx_samples: 20
+  vx_samples: 10
   vtheta_samples: 30
   sim_granularity: 0.025
   angular_sim_granularity: 0.025
