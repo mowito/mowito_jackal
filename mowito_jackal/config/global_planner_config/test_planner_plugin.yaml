@@ -2,9 +2,9 @@
 mode : 2
 
 #The planner plugin to load, uncomment the planner to be used
-#planner : {name : "NavfnPlanner", type: "navfn_planner/NavfnPlanner" }
+planner : {name : "NavfnPlanner", type: "navfn_planner/NavfnPlanner" }
 #planner : {name: "SBPL", type: "SBPLLatticePlanner"}
-planner : {name: "genroute", type: "global_planner/SimplePlanner"}
+#planner : {name: "genroute", type: "global_planner/SimplePlanner"}
 
 #The parameters used when mode is random
 num_of_tests : 100 #no of tests to run
