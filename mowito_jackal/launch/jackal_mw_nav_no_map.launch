@@ -9,23 +9,12 @@
     <arg name="respawn" default="true"/>
     <arg name="debug" default="false"/>
 
-    <arg name="world_name" default="mowito"/>
     <arg name="gui" default="true"/>
 
-
-    <!--node pkg="tf" type="static_transform_publisher" name="ROSbot2_laser" args="0 0 0 3.14 0 0 base_link laser 10" /-->
-
-    <!-- SIMULATION -->
-    <!-- rosbot and the rviz-->
-    <!--include file="$(env HOME)/mowito/launch/rosbot_rviz.launch">
-        <arg name="rviz_file" value="rosbot.rviz"/>
-    </include-->
-
-    <!-- the world -->
-    <!--include file="$(find rosbot_gazebo)/launch/rosbot_world.launch">
-        <arg name="world" value="$(find rosbot_gazebo)/worlds/$(arg world_name).world"/>
+    <!-- Adding Robot -->
+    <include file="$(find jackal_gazebo)/launch/jackal_world.launch" >
         <arg name="gui" value="$(arg gui)"/>
-    </include-->
+    </include>
    
     <!-- NAVIGATION -->
     <!-- mapping node-->
@@ -36,11 +25,6 @@
         <arg name="base_frame" value="base_link" />
         <arg name="map_frame" value="map" />
     </include>
-
-    <!-- -for converting the odom msg to tf -->
-    <!--node pkg="utils" type="msg_to_tf" name="msg_to_tf">
-        <param name="odometry_topic" value="/odom"/>
-    </node-->
     
     <!-- nav server-->
     <include file="$(find mowito_jackal)/launch/secondary_launch/start_nav_server.launch">

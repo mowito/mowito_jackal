@@ -6,7 +6,9 @@
     <arg name="map_frame" default="map" />
 
     
-
+    <!-- Adding Robot -->
+    <include file="$(find jackal_gazebo)/launch/jackal_world.launch" />
+    
     <!-- NAVIGATION -->
     <include file="$(find mowito_jackal)/launch/secondary_launch/start_mw_mapping.launch">
         <arg name="scan_topic" value="front/scan" /> 

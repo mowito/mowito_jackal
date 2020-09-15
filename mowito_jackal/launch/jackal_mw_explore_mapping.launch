@@ -11,6 +11,9 @@
     <arg name="world_name" default="mowito"/>
     <arg name="gui" default="true"/>
    
+    <!-- Adding Robot -->
+    <include file="$(find jackal_gazebo)/launch/jackal_world.launch" />
+
     <!-- NAVIGATION -->
     <!-- mapping node-->
     <include file="$(find mowito_jackal)/launch/include/start_mw_mapping.launch">
@@ -20,11 +23,6 @@
         <arg name="base_frame" value="base_link" />
         <arg name="map_frame" value="map" />
     </include>
-
-    <!-- -for converting the odom msg to tf -->
-    <!--node pkg="utils" type="msg_to_tf" name="msg_to_tf">
-        <param name="odometry_topic" value="/odom"/>
-    </node-->
     
     <!-- nav server-->
     <include file="$(find mowito_jackal)/launch/include/start_nav_server.launch">
