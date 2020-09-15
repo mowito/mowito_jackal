@@ -1,5 +1,5 @@
 #The planner mode 0->RVIZ 1->RANDOM 2->WAYPOINTS
-mode : 0
+mode : 2
 
 #The planner plugin to load, uncomment the planner to be used
 planner : {name : "NavfnPlanner", type: "navfn_planner/NavfnPlanner" }
@@ -16,3 +16,10 @@ waypoints :
   - [1.0,1.0,0]
   - [3.0,1.0,0.0]
   - [3.0,-1.0,3.14]
+  - [4.0, 1.0, 0.0 ]
+  - [4.0, -1.0, 3.14]
+  - [6.0, 1.5,0.0]
+  - [6.0, -1.5,3.14 ]
+  - [10, 1.0, 0.0 ]
+  - [10, -1.0, 3.14 ]
+

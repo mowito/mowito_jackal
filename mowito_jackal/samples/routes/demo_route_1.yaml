@@ -1,0 +1,18 @@
+id: 1
+radii: [1]          # radius of turn
+st_points_distance: 0.01  # number of points in a straight segment
+corner_density: 0.01   # difference in angle (radians) berween two points on the arc
+waypoints :
+
+  - [0, 0]
+  #- [2, 0, 0.523]
+  #- [10, 0.785]
+  - [3.85, 4]
+  - [6, 5]
+  - [6 ,3]
+  #- [5, 1]
+  - [4, 1]
+  - [3, -0.2]
+  - [1, -2]
+  - [0, -2.5]
+  - [-1.2, -3.7]
