@@ -20,6 +20,3 @@ recoveries:
   rotate: 5.0
   back_up: 7.0
   stepback_and_steerturn: 10.0
-
-
-

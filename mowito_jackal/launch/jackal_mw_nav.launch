@@ -2,12 +2,13 @@
 <launch>
     <arg name="respawn" default="true"/>
     <arg name="debug" default="false"/>
-    <arg name="world_name" default="mowito"/>
     <arg name="gui" default="true"/>
     <arg name="map_path" default="$(find mowito_jackal)/maps/jackal_race.yaml"/>	
 
     <!-- Adding Robot -->
-    <include file="$(find jackal_gazebo)/launch/jackal_world.launch" />
+    <include file="$(find jackal_gazebo)/launch/jackal_world.launch" >
+        <arg name="gui" value="$(arg gui)"/>
+    </include>
 
     <include file="$(find mowito_jackal)/launch/secondary_launch/start_mwpfl.launch">
         <arg name="map_address" value="$(arg map_path)"/>
