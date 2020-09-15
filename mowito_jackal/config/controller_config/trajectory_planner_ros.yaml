@@ -35,7 +35,7 @@ trajectory_planner:
     padding: 0.01
 
 # Cost Weights 
-  pdist_scale: .75 #0.6
+  pdist_scale: .74 #0.6
   gdist_scale: 1.0 #0.8
   occdist_scale: 0.1 #0.01
 
