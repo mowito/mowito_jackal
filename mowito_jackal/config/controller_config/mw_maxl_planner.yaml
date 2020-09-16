@@ -8,7 +8,7 @@ mw_maxl_planner:
   map_frame: "map"
   robot_frame: "base_link"
   velodyne_frame: "velodyne"
-  laser_frame: "base_laser"
+  laser_frame: "front_laser"
 
   lookahead_goal_on_path: true
   min_lookahead: 1.5
