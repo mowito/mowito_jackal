@@ -4,11 +4,12 @@
     <arg name="odom_frame" default="odom" />
     <arg name="base_frame" default="base_link" />
     <arg name="map_frame" default="map" />
-
+    <arg name="gui" default="true"/>
     
     <!-- Adding Robot -->
-    <include file="$(find jackal_gazebo)/launch/jackal_world.launch" />
-    
+    <include file="$(find jackal_gazebo)/launch/jackal_world.launch" >
+        <arg name="gui" value="$(arg gui)"/>
+    </include>
     <!-- NAVIGATION -->
     <include file="$(find mowito_jackal)/launch/secondary_launch/start_mw_mapping.launch">
         <arg name="scan_topic" value="front/scan" /> 
