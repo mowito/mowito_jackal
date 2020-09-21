@@ -26,7 +26,7 @@
     
     <!-- nav server-->
     <include file="$(find mowito_jackal)/launch/include/start_nav_server.launch">
-        <arg name="mission_executive_config" value="$(find mowito_jackal)/config/mission_executive_config/exploration.yaml"/>
+        <arg name="mission_executive_config" value="$(find mowito_jackal)/config/mission_executive_config/mission_executive_params.yaml"/>
         <arg name="respawn" value="$(arg respawn)"/>
         <arg name="gp_debug" value="$(arg debug)"/>
         <arg name="ctrl_debug" value="$(arg debug)"/>
