@@ -11,9 +11,9 @@ global_costmap:
   rolling_window: true
   resolution: 0.05
   plugins:
-    - {name: static_layer,           type: "costmap_2d::StaticLayer"}
-    - {name: obstacle_layer,         type: "costmap_2d::ObstacleLayer"}
-    - {name: inflation_layer,        type: "costmap_2d::InflationLayer"}
+    - {name: static_layer,           type: "mw_costmap::StaticLayer"}
+    - {name: obstacle_layer,         type: "mw_costmap::ObstacleLayer"}
+    - {name: inflation_layer,        type: "mw_costmap::InflationLayer"}
   inflation_layer:
     cost_scaling_factor: 3.0
     inflation_radius: 0.4
